@@ -1,61 +1,61 @@
 #include<bits/stdc++.h>
-using namespace std;
+using namespace std ;
 int main()
 {
-    char s[1005],a[3];
-    long long int t,n,m=0,l,p=0;
-    long long int i,j,k;
+    int t,n,i,l,zero,minus_one,plus_one,v1,v2;
+    string s ;
+    int a[30] ;
 
-    scanf("%lld",&t);
-    for(i=1;i<=t;i++)
+    cin >> t ;
+    while(t--)
     {
-        scanf("%lld",&n);
-        getchar();
-        for(j=1;j<=n;j++)
+        zero=0 ;
+        minus_one = 0 ;
+        plus_one = 0 ;
+        memset(a,0,sizeof(a)) ;
+        cin >> n ;
+        while(n--)
         {
-            scanf("%s",s);
-            l=strlen(s);
-            if(n==1)
+            cin >> s ;
+            l = s.length() ;
+            a[s[0]-97]-- ;
+            a[s[l-1]-97]++ ;
+        }
+        for(i=0; i<26; i++)
+        {
+            if(a[i]==0)
             {
-                printf("Ordering is possible.\n");
-
-                p=2;
+                zero++ ;
             }
-            else if(j==1)
+        }
+        if(zero==26)
+        {
+            cout << "Ordering is possible." << endl;
+        }
+        else
+        {
+            for(i=0; i<26; i++)
             {
-                a[0]=s[l-1];
-            }
-            else if(j>=2)
-            {
-                a[1]=s[0];
-                if(a[0]==a[1])
+                if(a[i]<0)
                 {
-                    a[0]=a[1]='\0';
-                    a[0]=s[l-1];
+                    minus_one++ ;
+                    v1 = a[i] ;
                 }
-                else
+                else if(a[i]>0)
                 {
-                    m=5;
+                    plus_one++ ;
+                    v2 = a[i] ;
                 }
             }
-
-
+            if(minus_one==1 && plus_one==1 && v1==-1 && v2==1)
+            {
+                cout << "Ordering is possible." << endl;
+            }
+            else
+            {
+                cout << "The door cannot be opened." << endl;
+            }
         }
-
-        if(m!=5 && p!=2)
-        {
-            printf("Ordering is possible.\n");
-        }
-        else if(m==5)
-        {
-            printf("The door cannot be opened.\n");
-        }
-
-        m=0;p=0;
-        a[0]=a[1]='\0';
-
-
     }
-
     return 0;
 }
