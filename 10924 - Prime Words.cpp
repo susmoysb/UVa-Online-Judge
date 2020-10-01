@@ -12,55 +12,55 @@ int main()
         {
             if(s[i]=='a')
             {
-                sum=sum+1;
+                sum+=1;
             }
             else if(s[i]=='b')
             {
-                sum=sum+2;
+                sum+=2;
             }
             else if(s[i]=='c')
             {
-                sum=sum+3;
+                sum+=3;
             }
             else if(s[i]=='d')
             {
-                sum=sum+4;
+                sum+=4;
             }
             else if(s[i]=='e')
             {
-                sum=sum+5;
+                sum+=5;
             }
             else if(s[i]=='f')
             {
-                sum=sum+6;
+                sum+=6;
             }
             else if(s[i]=='g')
             {
-                sum=sum+7;
+                sum+=7;
             }
             else if(s[i]=='h')
             {
-                sum=sum+8;
+                sum+=8;
             }
             else if(s[i]=='i')
             {
-                sum=sum+9;
+                sum+=9;
             }
             else if(s[i]=='j')
             {
-                sum=sum+10;
+               sum+=10;
             }
             else if(s[i]=='k')
             {
-                sum=sum+11;
+               sum+=11;
             }
             else if(s[i]=='l')
             {
-                sum=sum+12;
+               sum+=12;
             }
             else if(s[i]=='m')
             {
-                sum=sum+13;
+               sum+=13;
             }
             else if(s[i]=='n')
             {
